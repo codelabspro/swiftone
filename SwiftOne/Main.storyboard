@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ssh-Tp-y2z">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Bd4-Vb-CNu">
+            <objects>
+                <viewController id="Ssh-Tp-y2z" customClass="ViewController" customModule="SwiftOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eUn-op-fF0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Le7-Nh-3Y0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ndB-WZ-qrg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotable Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfk-9J-tr2">
+                                <rect key="frame" x="52" y="60" width="216" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="000-vb-FpK"/>
+                                    <constraint firstAttribute="width" constant="216" id="G4v-Zb-L7F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An interesting fact goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="148-j5-KfV">
+                                <rect key="frame" x="52" y="130" width="216" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="27G-BJ-7S7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1e-Tn-tjU">
+                                <rect key="frame" x="52" y="414" width="216" height="61"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="SgE-Xm-E9M"/>
+                                    <constraint firstAttribute="width" constant="216" id="xzm-y7-Dh7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.35294117647058826" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show Another Quote">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnotherFunFactTapped:" destination="Ssh-Tp-y2z" eventType="touchUpInside" id="EQk-Xh-LF5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117647058826" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Le7-Nh-3Y0" firstAttribute="top" secondItem="p1e-Tn-tjU" secondAttribute="bottom" constant="93" id="5ZC-AP-naI"/>
+                            <constraint firstItem="148-j5-KfV" firstAttribute="leading" secondItem="ndB-WZ-qrg" secondAttribute="leadingMargin" constant="36" id="5kA-hR-5EG"/>
+                            <constraint firstItem="148-j5-KfV" firstAttribute="top" secondItem="eUn-op-fF0" secondAttribute="bottom" constant="110" id="7G9-I7-bPO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bfk-9J-tr2" secondAttribute="trailing" constant="36" id="B5j-bE-Vut"/>
+                            <constraint firstItem="Bfk-9J-tr2" firstAttribute="leading" secondItem="ndB-WZ-qrg" secondAttribute="leadingMargin" constant="36" id="JtW-r6-RwE"/>
+                            <constraint firstItem="Bfk-9J-tr2" firstAttribute="top" secondItem="eUn-op-fF0" secondAttribute="bottom" constant="40" id="ydG-o4-jde"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="funFactLabel" destination="148-j5-KfV" id="ah0-oZ-eht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UA2-vF-FAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="447"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
