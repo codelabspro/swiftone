@@ -11,12 +11,19 @@ import UIKit
 class ViewController: UIViewController {
 
     let quoteBook = QuoteBook()
+    let colorWheel = ColorWheel()
 
+    @IBOutlet weak var funFactButton: UIButton!
+    @IBOutlet weak var funFactLabel: UILabel!
     
     @IBAction func showAnotherFunFactTapped(sender: AnyObject) {
         funFactLabel.text = quoteBook.randomQuote()
+        var randomColor = colorWheel.randomColor()
+        view.backgroundColor = randomColor
+        funFactButton.tintColor = randomColor
+        
     }
-    @IBOutlet weak var funFactLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         funFactLabel.text = quoteBook.randomQuote()
